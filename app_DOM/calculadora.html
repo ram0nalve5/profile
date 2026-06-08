@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h2>Calculadora simples</h2>
+    <input type="number" id="n1">
+    <input type="number" id="n2">
+    <br>
+    <button id="somar">+</button>
+    <button id="subtrair">-</button>
+    <button id="dividir">/</button>
+    <button id="multiplicar">*</button>
+    <p id="resultado"></p>
+
+    <script>
+        var n1 = document.getElementById("n1")
+        var n2 = document.getElementById("n2")
+        var res = document.getElementById("resultado")
+        document.getElementById("somar").addEventListener("click", () => {
+            res.innerHTML = Number(n1.value) + Number(n2.value)
+        })
+        document.getElementById("subtrair").addEventListener("click", () => {
+            res.innerHTML = Number(n1.value) - Number(n2.value)
+        })
+        document.getElementById("multiplicar").addEventListener("click", () => {
+            res.innerHTML = Number(n1.value) * Number(n2.value)
+        })
+        document.getElementById("dividir").addEventListener("click", () => {
+            res.innerHTML = Number(n2.value) === 0? "Indefinido" : res.innerHTML = parseFloat((n1.value) / Number(n2.value)).toFixed(2)
+            
+        })
+    </script>
+</body>
+</html>

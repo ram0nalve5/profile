@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            width: 350px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .input-area {
+            display: flex;
+            gap: 8px;
+        }
+
+        #tarefa {
+            flex: 1;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+
+        #tarefa:focus {
+            border-color: #2575fc;
+        }
+
+        #add {
+            padding: 10px 15px;
+            border: none;
+            border-radius: 8px;
+            background: #2575fc;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #add:hover {
+            background: #1a5fd1;
+        }
+
+        #lista {
+            margin-top: 20px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #lista li {
+            background: #f4f6f8;
+            margin-bottom: 8px;
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.2s;
+            border-left: 4px solid #2575fc;
+        }
+
+        #lista li:hover {
+            transform: scale(1.02);
+            background: #e9eef5;
+        }
+
+        small {
+            display: block;
+            margin-top: 10px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>To-Do List</h1>
+
+        <div class="input-area">
+            <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+            <button id="add">Adicionar</button>
+        </div>
+
+        <small>Clique em um item para remover</small>
+
+        <ul id="lista"></ul>
+
+    </div>
+
+    <script>
+        var input = document.getElementById("tarefa")
+        var botao = document.getElementById("add")
+        var lista = document.getElementById("lista")
+
+        botao.addEventListener("click", adicionar)
+        lista.addEventListener("click", remover)
+
+        function adicionar() {
+            var texto = input.value.trim()
+            if (texto === "") return
+
+            var li = document.createElement("li")
+            li.innerHTML = texto
+            lista.appendChild(li)
+
+            input.value = ""
+            input.focus()
+        }
+
+        function remover(event) {
+            if (event.target.tagName === "LI") {
+                event.target.remove()
+            }
+        }
+    </script>
+
+</body>
+</html>

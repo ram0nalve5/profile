@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            transition: 0.4s ease;
+        }
+
+        /* HEADER */
+        header {
+            width: 100%;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            color: white;
+        }
+
+        #relogio {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        #alterar_tema {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            background: white;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #alterar_tema:hover {
+            transform: scale(1.05);
+        }
+
+        /* TITLE */
+        h1 {
+            margin: 40px 0 20px 0;
+            color: white;
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+
+        /* INPUT CONTAINER */
+        div {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            display: flex;
+            gap: 10px;
+        }
+
+        /* INPUTS */
+        input {
+            padding: 12px;
+            border-radius: 30px;
+            border: none;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        #tarefa {
+            width: 180px;
+        }
+
+        #peso_tarefa {
+            width: 90px;
+            text-align: center;
+        }
+
+        /* BUTTON */
+        #add {
+            padding: 12px 18px;
+            border-radius: 30px;
+            border: none;
+            background: #ffffff;
+            color: #764ba2;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        #add:hover {
+            transform: scale(1.05);
+        }
+
+        /* LIST */
+        #lista {
+            margin-top: 25px;
+            list-style: none;
+            width: 320px;
+        }
+
+        #lista li {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 12px;
+            margin-bottom: 10px;
+            border-radius: 15px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: aparecer 0.3s ease;
+        }
+
+        #lista li:hover {
+            transform: translateX(5px);
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        @keyframes aparecer {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* CONTADORES */
+        #contador,
+        #pesador {
+            margin-top: 10px;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        /* DARK MODE */
+        .dark {
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+        }
+
+        .dark header {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .dark div {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .dark #lista li {
+            background: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<header>
+    <div id="relogio"></div>
+    <button id="alterar_tema"> Alterar Tema </button>
+</header>
+
+<body>
+    <h1>To-Do List</h1>
+    <div>
+        <input type="text" id="tarefa" placeholder="Digite uma tarefa">
+        <input type="text" id="peso_tarefa" placeholder="Peso">
+        <button id="add"> Adicionar </button>
+    </div>
+    <small>Clique em um item para remover</small>
+    <ul id="lista"></ul>
+    <p>Contagem</p>
+    <div id="contador"> 0 </div>
+    <p>Peso Total</p>
+    <div id="pesador"> 0 </div>
+
+    <script>
+    var relogio = document.getElementById("relogio")
+
+    function atualizarRelogio() {
+        var agora = new Date()
+        relogio.innerHTML = agora.toLocaleTimeString()
+    }
+
+    atualizarRelogio()
+    setInterval(atualizarRelogio, 1000)
+
+    var alterar_tema = document.getElementById("alterar_tema")
+    alterar_tema.addEventListener("click", alterar)
+
+    function alterar() {
+        document.body.classList.toggle("dark")
+    }
+
+    var input = document.getElementById("tarefa")
+    var peso = document.getElementById("peso_tarefa")
+    var botao = document.getElementById("add")
+    var lista = document.getElementById("lista")
+
+    botao.addEventListener("click", adicionar)
+    lista.addEventListener("click", remover)
+
+    var contagem = 0
+    var peso_t = 0
+
+    function adicionar() {
+        var texto = input.value.trim()
+        if (texto === "") return
+
+        var valorPeso = Number(peso.value) || 0
+
+        var li = document.createElement("li")
+        li.innerHTML = texto + " (Peso: " + valorPeso + ")"
+
+        li.dataset.peso = valorPeso
+
+        lista.appendChild(li)
+
+        peso_t += valorPeso
+        contagem += 1
+
+        document.getElementById("pesador").innerHTML = peso_t
+        document.getElementById("contador").innerHTML = contagem
+
+        input.value = ""
+        peso.value = ""
+        input.focus()
+    }
+
+    function remover(event) {
+        if (event.target.tagName === "LI") {
+
+            var pesoItem = Number(event.target.dataset.peso)
+
+            peso_t -= pesoItem
+            contagem -= 1
+
+            event.target.remove()
+
+            document.getElementById("contador").innerHTML = contagem
+            document.getElementById("pesador").innerHTML = peso_t
+        }
+    }
+</script>
+</body>
+
+</html>

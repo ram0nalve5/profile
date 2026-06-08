@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação E-mail</title>
+</head>
+<body>
+    <h2>Validação de E-mail</h2>
+    <input id="email" placeholder="Digite seu e-mail">
+    <button id="validar">Validar</button>
+    <p id="msg"></p>
+
+    <script>
+        document.getElementById("validar").addEventListener
+        ("click",()=>{
+            var email = document.getElementById("email").value.trim()
+            var msg = document.getElementById("msg")
+            var validar = false
+            for(var letra of email){
+                if(letra === "@" ){
+                    validar=true
+                    break
+                }
+            }
+            msg.innerText=validar? "E-mail válido!" : "E-mail inválido."
+            msg.style.color=validar? "green" : "red"
+
+        })
+    </script>
+</body>
+</html>
