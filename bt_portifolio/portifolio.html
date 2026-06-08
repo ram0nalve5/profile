@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <title>Portfolio</title>
+</head>
+
+<body class="bg-dark text-light">
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-dark bg-black shadow-sm mb-5">
+            <div class="container justify-content-center">
+                <h2 class="mb-0">My Portfolio</h2>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="row g-4">
+
+    <!-- COLUNA ESQUERDA -->
+    <div class="col-lg-8">
+
+        <!-- ABOUT -->
+        <div class="accordion" id="accordionExample">
+
+            <div class="accordion-item bg-black border-secondary mb-3">
+
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-black text-light"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne">
+                        About Me
+                    </button>
+                </h2>
+
+                <div id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body bg-dark text-light">
+
+                        <p>Hello! My name is Ramon, and I am a Software Development student.</p>
+
+                        <p>
+                            I am passionate about programming, technology,
+                            and problem-solving.
+                        </p>
+
+                        <p>
+                            I enjoy creating websites, applications and digital
+                            solutions that can help people and businesses solve
+                            real-world problems.
+                        </p>
+
+                        <p>
+                            Every day I seek to improve my skills through studies,
+                            personal projects and practical experience with modern technologies.
+                        </p>
+
+                        <p class="mb-0">
+                            My goal is to become a professional software developer
+                            and contribute to innovative projects while continuously
+                            learning and growing in the technology field.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="accordion-item bg-black border-secondary">
+
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed bg-black text-light"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo">
+                        Academic Formation
+                    </button>
+                </h2>
+
+                <div id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample">
+
+                    <div class="accordion-body bg-dark text-light">
+
+                        <p>
+                            Currently studying Systems Development at SENAI.
+                        </p>
+
+                        <p>
+                            During my studies I have worked with programming logic,
+                            databases, web development and software engineering concepts.
+                        </p>
+
+                        <p>
+                            I am constantly learning new technologies and best
+                            practices used in the software development industry.
+                        </p>
+
+                        <p class="mb-0">
+                            Technologies: JavaScript, HTML, CSS, Bootstrap,
+                            React, Java, Python, Flask and MySQL.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SKILLS -->
+        <div class="card bg-black border-secondary shadow-sm mt-4">
+
+            <div class="card-body text-light">
+
+                <h3 class="mb-4">Skills</h3>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>Python</span>
+                        <span>90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-success" style="width:90%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>JavaScript</span>
+                        <span>80%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-info" style="width:80%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>SQL</span>
+                        <span>70%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-warning" style="width:70%"></div>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex justify-content-between">
+                        <span>HTML / CSS / Bootstrap</span>
+                        <span>40%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar bg-danger" style="width:40%"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COLUNA DIREITA -->
+    <div class="col-lg-4">
+
+        <div class="card bg-black border-secondary shadow-sm h-70">
+
+            <div class="card-body text-center py-5">
+
+                <h4 class="mb-4">Info</h4>
+
+                <img src="images/foto-portifolio.jpeg"
+                    class="rounded-circle mb-4"
+                    style="width:220px; height:220px; object-fit:cover;">
+
+                <h5 class="mb-3">Ramon Alves</h5>
+
+                <p class="text-secondary mb-2">
+                    🇧🇷 Brazil
+                </p>
+
+                <p class="text-secondary mb-2">
+                    💻 Software Development Student
+                </p>
+
+                <p class="text-secondary mb-3">
+                    📧 ramon.alves906900@gmail.com
+                </p>
+
+                <hr class="border-secondary">
+
+                <p class="small">
+                    Passionate about technology and software development.
+                    Focused on creating modern and responsive applications.
+                </p>
+
+                <p class="small">
+                    Interested in front-end and back-end development,
+                    constantly improving through practical projects.
+                </p>
+
+                <p class="small mb-4">
+                    Looking for opportunities to gain professional
+                    experience and contribute to innovative solutions.
+                </p>
+
+                <span class="badge bg-success fs-6 px-3 py-2">
+                    Open to Work
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- CAROUSEL -->
+        <div id="carousel" class="carousel slide mt-5 mb-5" data-bs-ride="carousel">
+
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="./images/projeto-TodoListJavascript.png"
+                        class="d-block w-100"
+                        style="height:500px; object-fit:cover;">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://wallpapers.com/images/hd/neymar-jr-pro-shot-bw-ntpac5ynovnow4wo.jpg"
+                        class="d-block w-100"
+                        style="height:500px; object-fit:cover;">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.9lDVrjCWXud4kKXCNJVRLAHaE7"
+                        class="d-block w-100"
+                        style="height:500px; object-fit:cover;">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-light py-4 mt-5">
+
+        <div class="container text-center">
+
+            <h5 class="mb-3">Contact Me</h5>
+
+            <a href="https://wa.me/5514981808593"
+                target="_blank"
+                class="text-decoration-none text-secondary me-3">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="https://instagram.com/"
+                target="_blank"
+                class="text-decoration-none text-secondary me-3">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+
+            <a href="mailto:ramon.alves906900@gmail.com"
+                class="text-decoration-none text-secondary">
+                <i class="bi bi-envelope"></i> ramon.alves906900@gmail.com
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
