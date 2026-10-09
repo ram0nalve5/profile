@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="icon" type="image/png" href="imagens/favicon.png">
+    <title>Home</title>
+</head>
+
+<body class="bg-dark">
+    <div class="stars-bg">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+    </div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-black shadow-sm mb-5 py-4">
+            <div class="container">
+
+                <!-- Botão hamburguer (só aparece no mobile) -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#menuNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Links -->
+                <div class="collapse navbar-collapse justify-content-center" id="menuNav">
+                    <ul class="navbar-nav gap-lg-4 text-center">
+                        <li class="nav-item"><a href="index.html" class="nav-link text-light">Home</a></li>
+                        <li class="nav-item"><a href="portifolio.html" class="nav-link text-light">Portfólio</a></li>
+                        <li class="nav-item"><a href="contato.html" class="nav-link text-light">Contato</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- PERFIL -->
+                <div class="col-lg-3">
+
+                    <div class="card bg-black border-secondary shadow-sm h-100">
+
+                        <div class="card-body text-center text-light py-5">
+
+                            <h4 class="mb-4">Perfil</h4>
+
+                            <img src="images/foto-perfil.jpeg" class="rounded-circle mb-4" id="img-perfil">
+
+                            <h5 class="mb-3">Ramon Alves</h5>
+
+                            <p class="mb-2">🇧🇷 Brasil</p>
+
+                            <p class="mb-3">
+                                • Estudante de Desenvolvimento de Sistemas
+                            </p>
+                            <hr>
+                            <p>
+                                Nasci e cresci em Botucatu. Atualmente, estou no último ano do Ensino Médio no SESI,
+                                escola onde estudo desde o 1º ano. Nos momentos livres, gosto de treinar na academia e
+                                me dedicar aos estudos musicais, uma das minhas maiores paixões desde a infância.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+
+
+                <!-- CONTEÚDO PRINCIPAL -->
+                <div class="col-lg-9">
+
+                    <!-- EXPERIÊNCIA -->
+                    <div class="card bg-black border-secondary text-light shadow-sm mb-4">
+
+                        <div class="card-body">
+
+                            <h3 class="mb-4">
+                                <i class="bi bi-briefcase-fill"></i>
+                                Experiência Profissional
+                            </h3>
+
+                            <h5>Estudante de Desenvolvimento de Sistema</h5>
+
+                            <p class="text-secondary">
+                                SENAI • 2025 - Hoje
+                            </p>
+
+                            <p>
+                                Desenvolvimento de aplicações web, bancos de dados, projetos de software utilizando
+                                tecnologias modernas.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- HABILIDADES -->
+                    <div class="card bg-black border-secondary text-light shadow-sm mb-4">
+                        <div class="card-body">
+
+                            <h3 class="mb-4">
+                                <i class="bi bi-code-slash"></i>
+                                Habilidades
+                            </h3>
+
+                            <h6 class="skill-category">Linguagens</h6>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="skill-badge"><i class="fa-brands fa-python"></i> Python</span>
+                                <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+                                <span class="skill-badge"><i class="fa-brands fa-java"></i> Java</span>
+                                <span class="skill-badge"><i class="fa-brands fa-html5"></i> HTML</span>
+                                <span class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</span>
+                                <span class="skill-badge"><i class="bi bi-database"></i> SQL</span>
+                            </div>
+
+                            <h6 class="skill-category">Frameworks e Bibliotecas</h6>
+                            <div class="d-flex flex-wrap gap-2 mb-4">
+                                <span class="skill-badge"><i class="fa-brands fa-react"></i> React</span>
+                                <span class="skill-badge"><i class="fa-brands fa-react"></i> React Native</span>
+                                <span class="skill-badge"><i class="fa-brands fa-bootstrap"></i> Bootstrap</span>
+                                <span class="skill-badge"><i class="bi bi-flask"></i> Flask</span>
+                                <span class="skill-badge"><i class="bi bi-diagram-3"></i> SQLAlchemy</span>
+                                <span class="skill-badge"><i class="bi bi-filetype-html"></i> Thymeleaf</span>
+                            </div>
+
+                            <h6 class="skill-category">Ferramentas</h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</span>
+                                <span class="skill-badge"><i class="fa-brands fa-github"></i> GitHub</span>
+                                <span class="skill-badge"><i class="bi bi-braces"></i> VS Code</span>
+                                <span class="skill-badge"><i class="bi bi-braces"></i> IntelliJ IDEA</span>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- FORMAÇÃO -->
+                    <div class="card bg-black border-secondary text-light shadow-sm">
+
+                        <div class="card bg-black border-secondary text-light shadow-sm">
+
+                            <div class="card-body">
+
+                                <h3 class="mb-4">
+                                    <i class="bi bi-mortarboard-fill"></i>
+                                    Formação e Conhecimentos
+                                </h3>
+
+                                <div class="accordion" id="educationAccordion">
+
+                                    <!-- Formação -->
+                                    <div class="accordion-item bg-dark border-secondary">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#formation">
+
+                                                Formação Acadêmica
+
+                                            </button>
+                                        </h2>
+
+                                        <div id="formation" class="accordion-collapse collapse"
+                                            data-bs-parent="#educationAccordion">
+
+                                            <div class="accordion-body text-light">
+
+                                                 <h5>Ensino Médio (em curso)</h5>
+
+                                                <p class="text-secondary">
+                                                    SESI • 2023 - 2026
+                                                </p>
+
+
+                                                <h5>Desenvolvimento de Sistemas (em curso)</h5>
+
+                                                <p class="text-secondary">
+                                                    SENAI • 2025 - 2026
+                                                </p>
+
+                                                <h5>Machine Learning aplicada à Indústria (em curso)</h5>
+                                                <p class="text-secondary">
+                                                    SENAI • 2025 - 2026
+                                                </p>
+
+
+                                                <p>
+                                                    Formação voltada ao desenvolvimento de software,
+                                                    bancos de dados e aplicações web, tratamentos de dadose modelagens
+                                                    de inteligência artificial.
+                                                </p>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Conceitos Aplicados -->
+                                    <div class="accordion-item bg-dark border-secondary">
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#concepts">
+                                                Conceitos Aplicados
+                                            </button>
+                                        </h2>
+                                        <div id="concepts" class="accordion-collapse collapse"
+                                            data-bs-parent="#educationAccordion">
+                                            <div class="accordion-body text-light">
+                                                <ul>
+                                                    <li>Desenvolvimento de APIs REST e operações CRUD</li>
+                                                    <li>Autenticação e controle de acesso com JWT</li>
+                                                    <li>Integração entre front-end e back-end (requisições HTTP e CORS)
+                                                    </li>
+                                                    <li>Gerenciamento de estado e Hooks no React</li>
+                                                    <li>Navegação entre páginas com React Router</li>
+                                                    <li>Persistência de dados (localStorage e banco de dados com
+                                                        SQLAlchemy)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Modelagem -->
+                                    <div class="accordion-item bg-dark border-secondary">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#modeling">
+
+                                                Modelagem e Documentação
+
+                                            </button>
+                                        </h2>
+
+                                        <div id="modeling" class="accordion-collapse collapse"
+                                            data-bs-parent="#educationAccordion">
+
+                                            <div class="accordion-body text-light">
+
+                                                <p>
+                                                    Experiência na criação de:
+                                                </p>
+
+                                                <ul>
+                                                    <li>Diagramas de Casos de Uso</li>
+                                                    <li>Diagramas Entidade-Relacionamento (ER)</li>
+                                                    <li>Dicionários de Dados</li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <!-- Inglês -->
+                                    <div class="accordion-item bg-dark border-secondary">
+
+                                        <h2 class="accordion-header">
+                                            <button class="accordion-button collapsed bg-dark text-light" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#english">
+
+                                                Cursos e Certificações
+
+                                            </button>
+                                        </h2>
+
+                                        <div id="english" class="accordion-collapse collapse"
+                                            data-bs-parent="#educationAccordion">
+
+                                            <div class="accordion-body text-light">
+
+                                                <p>
+                                                    Cursos tranversais:
+                                                </p>
+                                                <ul>
+                                                    <li>Excel Básico</li>
+                                                    <li>Competência Transversal - Segurança no Trabalho</li>
+                                                    <li>Fluência - Fundamentos da Inteligência Artificial </li>
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+    </main>
+
+
+
+
+
+    <!-- 
+    ____________________________________________________________________________________
+    FOOTER
+     ___________________________________________________________________________________
+    -->
+    <footer class="text-light py-5 mt-5">
+
+        <div class="container text-center">
+
+            <h5 class="mb-3">Contate-me</h5>
+
+            <a href="https://wa.me/5514981808593" target="_blank" class="text-decoration-none text-secondary me-3">
+                <i class="fa-brands fa-whatsapp"></i> WhatsApp
+            </a>
+
+            <a href="https://instagram.com/rran0m" target="_blank" class="text-decoration-none text-secondary me-3">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+
+            <a href="mailto:ramon.alves906900@gmail.com" class="text-decoration-none text-secondary me-3">
+                <i class="bi bi-envelope"></i> E-mail
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

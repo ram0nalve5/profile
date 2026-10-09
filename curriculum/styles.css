@@ -1,0 +1,267 @@
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+}
+
+/* Imagem de perfil */
+#img-perfil {
+    width:230px;
+    height:230px;
+    object-fit:cover;
+}
+#img-perfil:hover {
+    scale: 1.1;
+    border-radius: 5px !important;
+    transition: 0.3s;
+    transform: 0.2s;
+    cursor: pointer;
+}
+
+.project-card {
+    background-color: #000;
+    border: 1px solid #2a2a2a;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.project-card:hover {
+    box-shadow: 0 15px 35px rgba(91, 33, 182, 0.4);
+    border-color: #5b21b6;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .img-wrapper img {
+    transform: scale(1.03);
+}
+
+.stars-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+    background: radial-gradient(ellipse at bottom, #1b0a2e 0%, #000 100%);
+}
+
+#stars, #stars2, #stars3 {
+    position: absolute;
+    background: transparent;
+}
+
+#stars {
+    width: 1px;
+    height: 1px;
+    animation: animStar 100s linear infinite;
+}
+
+#stars2 {
+    width: 2px;
+    height: 2px;
+    animation: animStar 180s linear infinite;
+}
+
+#stars3 {
+    width: 3px;
+    height: 3px;
+    animation: animStar 250s linear infinite;
+}
+
+#stars::after, #stars2::after, #stars3::after {
+    content: " ";
+    position: absolute;
+    top: 2000px;
+    background: transparent;
+    width: inherit;
+    height: inherit;
+    box-shadow: inherit;
+}
+
+@keyframes animStar {
+    from {
+        transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-2000px);
+    }
+}
+
+main, footer, header {
+    position: relative;
+    z-index: 1;
+}
+
+header .navbar {
+    background-color: rgba(20, 7, 29, 0.6) !important;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.12);
+}
+
+main .card {
+    background-color: rgba(10, 5, 20, 0.5) !important;
+    border: 1px solid rgba(139, 92, 246, 0.15) !important;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+main .card .card {
+    background-color: transparent !important;
+    border: none !important;
+    backdrop-filter: none;
+}
+
+.accordion-item,
+.accordion-button,
+.accordion-button:not(.collapsed) {
+    background-color: transparent !important;
+    border-color: rgba(139, 92, 246, 0.15) !important;
+    box-shadow: none;
+}
+
+footer {
+    background-color: rgba(10, 5, 20, 0.5);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(139, 92, 246, 0.12);
+}
+
+.skill-category {
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #e9e3ff;
+    background: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-badge:hover {
+    transform: translateY(-2px);
+    background: rgba(139, 92, 246, 0.25);
+    border-color: #8b5cf6;
+    box-shadow: 0 4px 14px rgba(91, 33, 182, 0.4);
+}
+
+main .form-control,
+main .form-select {
+    color: #e9e3ff !important;
+    background-color: rgba(10, 5, 20, 0.6) !important;
+    border: 1px solid rgba(139, 92, 246, 0.3) !important;
+    border-radius: 10px;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.3s ease;
+}
+
+main .form-control::placeholder {
+    color: #8b8499 !important;
+}
+
+
+main .form-control:focus,
+main .form-select:focus {
+    color: #e9e3ff !important;
+    background-color: rgba(20, 7, 29, 0.8) !important;
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15) !important;
+}
+
+main .form-select option {
+    color: #e9e3ff;
+    background-color: #14071d;
+}
+
+main .form-label,
+main .form-check-label {
+    color: #e9e3ff;
+}
+
+/* =========================
+   CHECKBOX E RADIO
+========================= */
+
+main .form-check-input {
+    background-color: rgba(10, 5, 20, 0.8);
+    border-color: rgba(139, 92, 246, 0.5);
+    cursor: pointer;
+}
+
+main .form-check-input:checked {
+    background-color: #8b5cf6;
+    border-color: #8b5cf6;
+}
+
+main .form-check-input:focus {
+    border-color: #a78bfa;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15);
+}
+
+
+/* Enviar avaliação */
+main button.btn[type="submit"] {
+    color: #e9e3ff;
+    background-color: rgba(139, 92, 246, 0.12);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+main button.btn[type="submit"]:hover {
+    color: #fff;
+    background-color: rgba(139, 92, 246, 0.25);
+    border-color: #8b5cf6;
+    box-shadow: 0 4px 14px rgba(91, 33, 182, 0.4);
+    transform: translateY(-2px);
+}
+
+
+main button.btn[type="reset"] {
+    color: #a8a0b8;
+    background-color: transparent;
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    border-radius: 10px;
+    padding: 10px 20px;
+    transition: all 0.2s ease;
+}
+
+main button.btn[type="reset"]:hover {
+    color: #fff;
+    background-color: rgba(139, 92, 246, 0.12);
+    border-color: #8b5cf6;
+    box-shadow: 0 4px 14px rgba(91, 33, 182, 0.25);
+    transform: translateY(-2px);
+}
+
+main button.btn:focus-visible {
+    outline: 2px solid #a78bfa;
+    outline-offset: 3px;
+}
